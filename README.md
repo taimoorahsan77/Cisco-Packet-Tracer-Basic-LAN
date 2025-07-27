@@ -50,3 +50,22 @@ interface GigabitEthernet0/1   # IMPORTANT: Adjust this interface name if yours 
 
 end
 copy running-config startup-config
+
+**## PC Configuration:**
+Each PC was statically configured with its IP address, subnet mask, and the appropriate default gateway (the router's interface IP for its subnet). Screenshots of the PC configurations are available in the images/ folder (if you upload them).
+
+**Verification**
+Connectivity was thoroughly verified using the ping command from various PCs:
+
+Intra-subnet communication: Pinging between PCs within the same subnet (e.g., PC0 to PC1) was successful.
+
+Gateway reachability: Each PC could successfully ping its designated default gateway (the router's interface).
+
+Inter-subnet communication: Crucially, PCs in different subnets could successfully ping each other (e.g., PC0 to PC2), confirming the router's proper function in routing traffic between segments.
+
+**How to Use This Project**
+Download: Download the [YourFileName].pkt file (e.g., Cisco-Simple-LAN.pkt) from this repository.
+
+Open in Packet Tracer: Open the downloaded .pkt file using Cisco Packet Tracer.
+
+Explore and Test: You can then examine the topology, review device configurations, and conduct your own ping tests from the PCs' "Desktop" -> "Command Prompt" to observe the network's behavior.
