@@ -28,11 +28,11 @@ The following IP addressing plan was used for the devices:
 | Router (Gi0/1)   | 192.168.2.1   | 255.255.255.0   | N/A                       | Switch 2     |
 
 
-**## PC Configuration:**
+## PC Configuration:
 
 Each PC was statically configured with its IP address, subnet mask, and the appropriate default gateway (the router's interface IP for its subnet). Screenshots of the PC configurations are available in the images/ folder (if you upload them).
 
-**Verification**
+## Verification
 
 Connectivity was thoroughly verified using the ping command from various PCs:
 
@@ -42,11 +42,11 @@ Gateway reachability: Each PC could successfully ping its designated default gat
 
 Inter-subnet communication: Crucially, PCs in different subnets could successfully ping each other (e.g., PC0 to PC2), confirming the router's proper function in routing traffic between segments.
 
-**How to Use This Project**
+## How to Use This Project
 
 Download: Download the Cisco-Packet-Tracer-Basic-LAN.pkt file from this repository.
 
-**Open in Packet Tracer: **
+## Open in Packet Tracer: 
 
 Open the downloaded .pkt file using Cisco Packet Tracer.
 
@@ -64,13 +64,13 @@ The router was configured with two interfaces, each acting as the default gatewa
 enable
 configure terminal
 ! Interface connected to 192.168.1.0/24 network (Switch 1)
-interface GigabitEthernet0/0   # IMPORTANT: Adjust this interface name if yours is different (e.g., FastEthernet0/0)
+interface GigabitEthernet0/0   
  ip address 192.168.1.1 255.255.255.0
  no shutdown
  exit
 
 ! Interface connected to 192.168.2.0/24 network (Switch 2)
-interface GigabitEthernet0/1   # IMPORTANT: Adjust this interface name if yours is different (e.g., FastEthernet0/1)
+interface GigabitEthernet0/1  
  ip address 192.168.2.1 255.255.255.0
  no shutdown
  exit
